@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    
+
 }
 
 :root {
@@ -105,4 +105,47 @@ h2 {
 
 .pencontro {
     text-align: center;
+}
+
+#customForm {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#customForm label {
+    display: block;
+    margin-top: 10px;
+}
+
+#customForm input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#customForm button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#customForm button:hover {
+    background: #218838;
+}
+
+#status {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
 }
