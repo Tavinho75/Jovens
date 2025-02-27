@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encontro de Jovens - IBRFM</title>
-    <link rel="shortcut icon" href="media/Logo.ico" type="image/x-icon">
+    <link rel="shortcut icon"
+     href="media/Logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobile.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -50,6 +51,23 @@
                 </li>
                 <li>
                     <a href="#Increver" class="itens-mobile">Inscreva-se</a>
+                </li>
+            </ul>
+        </nav>
+        <i id="burguermobile" class="material-icons" onclick="clickMobile()">menu</i>
+        <nav id="itensmobile">
+            <ul>
+                <li>
+                    <a href="#Home" class="itens-mobile2">Home</a>
+                </li>
+                <li>
+                    <a href="#Cronograma" class="itens-mobile2">Cronograma</a>
+                </li>
+                <li>
+                    <a href="#Sobre" class="itens-mobile2">Sobre</a>
+                </li>
+                <li>
+                    <a href="#Increver" class="itens-mobile2">Inscreva-se</a>
                 </li>
             </ul>
         </nav>
@@ -123,19 +141,159 @@
         <div id="Increver">
             <h2>Increva-se</h2>
         </div>
-    
 
-        <form id="customForm">
-            <input type="text" id="nome" placeholder="Nome">
-            <input type="email" id="email" placeholder="Email">
-            <input type="date" id="data" placeholder="Data"> 
-            <button type="submit">Enviar</button>
+        <form id="form" class="container m-4 pl-4" method="POST">
+            <div class="field">
+                <label class="label">Nome</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Seu Nome" name="Nome do Participante" />
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Email</label>
+                <div class="control">
+                    <input class="input" type="email" placeholder="Seu Email" name="Email" />
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Telefone</label>
+                <div class="control">
+                    <input class="input" type="tel" placeholder="(00) 00000-0000" name="Telefone" id="telefone" />
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Data</label>
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="Data" value="Sábado" /> Sábado (22/03)
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="Data" value="Domingo" /> Domingo (23/03)
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="Data" value="Ambos" /> Ambos (22 e 23/03)
+                    </label>
+                </div>
+            </div>
+
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-primary" type="submit" id="submit-button">
+                        Enviar
+                    </button>
+                </div>
+                <div class="control">
+                    <button class="button is-danger">Cancelar</button>
+                </div>
+            </div>
         </form>
-        <p id="status"></p>
-        
-        
-        <p id="status"></p>
+        <div id="message" style="
+                display: none;
+                margin: 20px;
+                font-weight: bold;
+                color: green;
+                padding: 8px;
+                background-color: beige;
+                border-radius: 4px;
+                border-color: aquamarine;
+              "></div>
     </main>
+    <script>
+        document.getElementById("form").addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent the default form submission
+            document.getElementById("message").textContent = "Enviando...";
+            document.getElementById("message").style.display = "block";
+            document.getElementById("submit-button").disabled = true;
+
+            // Collect the form data
+            var formData = new FormData(this);
+            var keyValuePairs = [];
+            for (var pair of formData.entries()) {
+                keyValuePairs.push(pair[0] + "=" + pair[1]);
+            }
+
+            var formDataString = keyValuePairs.join("&");
+
+            // Send a POST request to your Google Apps Script
+            fetch(
+                "https://script.google.com/macros/s/AKfycbxBRk_J0iWZa6N_uA83oFnOY2trjtV8sUQJwvjCCS3X7k_BEn2oLrIIvzSoWoFHMZZ3lg/exec",
+                {
+                    redirect: "follow",
+                    method: "POST",
+                    body: formDataString,
+                    headers: {
+                        "Content-Type": "text/plain;charset=utf-8",
+                    },
+                }
+            )
+                .then(function (response) {
+                    // Check if the request was successful
+                    if (response) {
+                        return response; // Assuming your script returns JSON response
+                    } else {
+                        throw new Error("Erro ao enviar o formulário.");
+                    }
+                })
+                .then(function (data) {
+                    // Display a success message
+                    document.getElementById("message").textContent =
+                        "Enviado com sucesso!";
+                    document.getElementById("message").style.display = "block";
+                    document.getElementById("message").style.backgroundColor = "green";
+                    document.getElementById("message").style.color = "beige";
+                    document.getElementById("submit-button").disabled = false;
+                    document.getElementById("form").reset();
+
+                    setTimeout(function () {
+                        document.getElementById("message").textContent = "";
+                        document.getElementById("message").style.display = "none";
+                    }, 2600);
+                })
+                .catch(function (error) {
+                    // Handle errors, you can display an error message here
+                    console.error(error);
+                    document.getElementById("message").textContent =
+                        "Um erro ocorreu ao enviar o formulário. Por favor, tente novamente.";
+                    document.getElementById("message").style.display = "block";
+                });
+        });
+    </script>
+
+    <script>
+        const inputTelefone = document.getElementById('telefone');
+
+        inputTelefone.addEventListener('input', function (e) {
+            let telefone = e.target.value;
+
+            // Remove tudo que não for número
+            telefone = telefone.replace(/\D/g, '');
+
+            // Limita o número de dígitos em 11 (2 para o DDD e até 9 para o número)
+            telefone = telefone.substring(0, 11);
+
+            // Formatação progressiva:
+            // Adiciona o parênteses no DDD após os dois primeiros dígitos
+            if (telefone.length >= 2) {
+                telefone = telefone.replace(/^(\d{2})(\d)/, '($1) $2');
+            }
+
+            // Formato para números com 8 dígitos (fixos)
+            if (telefone.length >= 10) {
+                telefone = telefone.replace(/(\d{4})(\d{4})$/, '$1-$2');
+            }
+
+            // Formato para números com 9 dígitos (celulares)
+            if (telefone.length === 11) {
+                telefone = telefone.replace(/(\d{5})(\d{4})$/, '$1-$2');
+            }
+
+            // Atualiza o valor do campo de input
+            e.target.value = telefone;
+        });
+    </script>
     <script src="js/script.js"></script>
 </body>
 

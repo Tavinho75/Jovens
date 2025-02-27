@@ -11,8 +11,15 @@
     --cor4: #3D4C2D;
     --cor5: #324B27;
 }
+#burguermobile {
+    display: none;
+}
 
 .title-mobile {
+    display: none;
+}
+
+#itensmobile {
     display: none;
 }
 

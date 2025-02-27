@@ -6,6 +6,75 @@
     --cor5: #324B27;
 }
 
+@media screen and (max-width: 400px) {
+    .header {
+        text-align: center;
+        display: block;
+    }
+
+    #burguer {
+        all: unset !important;
+        font-family: "Material Icons" !important;
+        font-weight: normal !important;
+        font-style: normal !important;
+        font-size: 25px !important;
+        display: none !important;
+        line-height: 1 !important;
+        text-transform: none !important;
+        letter-spacing: normal !important;
+        word-wrap: normal !important;
+        white-space: nowrap !important;
+        direction: ltr !important;
+    }
+
+    #burguermobile {
+        display: flex;
+        background-color: var(--cor4);
+        color: white;
+        font-size: 25px;
+        padding: 11px;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        transition: .4s;
+        margin: auto;
+        justify-content: center;
+        width: calc(100% - 60px);
+        margin-bottom: 5px;
+    }
+
+    #burguermobile:hover {
+        background-color: var(--cor2);
+    }
+
+    #itensmobile {
+        display: NONE;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+
+    .itens-mobile2 {
+        display: flex;
+        font-size: 17px;
+        font-weight: 400;
+        color: var(--cor4);
+        text-decoration: none;
+        transition: .4s;
+        padding: 7px 10px;
+        border-radius: 5px;
+    }
+
+    .itens-mobile2:hover {
+        color: white;
+        background-color: var(--cor5);
+    }
+}
+
+
 @media screen and (max-width: 750px) {
     .title {
         display: none;
@@ -22,7 +91,7 @@
 
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1130px) {
 
     body {
         background-color: white;
@@ -51,7 +120,7 @@
     }
 
     #itens {
-        display: flex;
+        display: none;
         justify-content: center;
         margin-bottom: 5px;
     }
@@ -66,9 +135,10 @@
         padding: 13px 20px;
         border-radius: 5px;
     }
-    
+
     .itens-mobile:hover {
         color: white;
         background-color: var(--cor5);
     }
+
 }
