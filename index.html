@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encontro de Jovens - IBRFM</title>
-    <link rel="shortcut icon"
-     href="media/Logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="media/Logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobile.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -74,11 +73,11 @@
         <hr>
     </header>
 
-    <main>
-        <video src="media/Vídeo - Home.mp4" autoplay muted loop>
-            Seu navegador não suporta video
-        </video>
 
+    <video src="media/Vídeo - Home.mp4" autoplay muted loop>
+        Seu navegador não suporta video
+    </video>
+    <main>
         <div>
             <h2 id="Cronograma">
                 Cronograma
@@ -116,185 +115,110 @@
             <h2>Sobre o Encontro</h2>
             <p class="pencontro">Este encontro será sobre <b>Quem é Deus</b> baseado em <b>1João 2:13b</b></p>
 
-            <h2>Sobre a Igreja</h2>
-            <p>A Igreja Batista Reformada de Francisco Morato (IBRFM) nasceu da maravilhosa graça de Deus e de Sua
-                infinita misericórdia. Desde o início, temos visto o Senhor derramar Suas bênçãos sobre este ministério,
-                nos guiando a cada passo, de acordo com Sua vontade soberana.</p>
-
-
-
-            <p>A igreja começou a se formar com o desejo de anunciar o Evangelho de Cristo Jesus por intermédio da
-                pregação fiel da Palavra de Deus, sustentada pelas doutrinas da graça e pela teologia reformada. A
-                convicção de que Cristo é o centro de todas as coisas e que Sua Palavra deve ser o fundamento de nossas
-                vidas foi o que motivou este ministério a ser plantado. Desde então, o Senhor tem sido bondoso em
-                levantar servos dedicados e comprometidos com a proclamação do Evangelho, com a edificação da igreja e
-                com a glorificação do nome do Senhor, nosso Deus.</p>
-
-
-
-            <p>Em cada passo, seja nos primeiros encontros no quintal da casa do Pr. Josué, seja na transição para um
-                espaço alugado para a formalização da Igreja, o Senhor tem suprido todas as nossas necessidades, tanto
-                espirituais quanto materiais. Hoje, como Igreja Batista Reformada, continuamos firmes no propósito de
-                anunciar a mensagem da graça soberana de Deus e fortalecer nossos membros para que vivam vidas piedosas,
-                edificadas na Palavra do Senhor.</p>
+            <div style="background-color: #B8CBA8; padding: 15px; border-radius: 10px;">
+                <h2>Sobre a Igreja</h2>
+                <p>A Igreja Batista Reformada de Francisco Morato (IBRFM) nasceu da maravilhosa graça de Deus e de Sua
+                    infinita misericórdia. Desde o início, temos visto o Senhor derramar Suas bênçãos sobre este
+                    ministério,
+                    nos guiando a cada passo, de acordo com Sua vontade soberana.</p>
+                <p>A igreja começou a se formar com o desejo de anunciar o Evangelho de Cristo Jesus por intermédio da
+                    pregação fiel da Palavra de Deus, sustentada pelas doutrinas da graça e pela teologia reformada. A
+                    convicção de que Cristo é o centro de todas as coisas e que Sua Palavra deve ser o fundamento de
+                    nossas
+                    vidas foi o que motivou este ministério a ser plantado. Desde então, o Senhor tem sido bondoso em
+                    levantar servos dedicados e comprometidos com a proclamação do Evangelho, com a edificação da igreja
+                    e
+                    com a glorificação do nome do Senhor, nosso Deus.</p>
+                <p>Em cada passo, seja nos primeiros encontros no quintal da casa do Pr. Josué, seja na transição para
+                    um
+                    espaço alugado para a formalização da Igreja, o Senhor tem suprido todas as nossas necessidades,
+                    tanto
+                    espirituais quanto materiais. Hoje, como Igreja Batista Reformada, continuamos firmes no propósito
+                    de
+                    anunciar a mensagem da graça soberana de Deus e fortalecer nossos membros para que vivam vidas
+                    piedosas,
+                    edificadas na Palavra do Senhor.</p>
+            </div>
         </div>
+
+
         <div id="Increver">
             <h2>Increva-se</h2>
         </div>
 
-        <form id="form" class="container m-4 pl-4" method="POST">
-            <div class="field">
-                <label class="label">Nome</label>
-                <div class="control">
-                    <input class="input" type="text" placeholder="Seu Nome" name="Nome do Participante" />
+        <div style="display: flex; justify-content: center;">
+            <form id="form" class="container m-4 pl-4 formulário" method="POST">
+                <div class="field">
+                    <label class="label">Nome:</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Seu Nome" name="Nome do Participante" />
+                    </div>
                 </div>
-            </div>
-
-            <div class="field">
-                <label class="label">Email</label>
-                <div class="control">
-                    <input class="input" type="email" placeholder="Seu Email" name="Email" />
+                <div class="field">
+                    <label class="label">Telefone:</label>
+                    <div class="control">
+                        <input class="input" type="tel" placeholder="(00) 00000-0000" name="Telefone" id="telefone" />
+                    </div>
                 </div>
-            </div>
-
-            <div class="field">
-                <label class="label">Telefone</label>
-                <div class="control">
-                    <input class="input" type="tel" placeholder="(00) 00000-0000" name="Telefone" id="telefone" />
+                <div class="field">
+                    <label class="label">Data:</label>
+                    <div class="control">
+                        <label class="radio">
+                            <input type="radio" name="Data" value="Sábado" /> Sábado (22/03)
+                        </label> <br>
+                        <label class="radio">
+                            <input type="radio" name="Data" value="Domingo" /> Domingo (23/03)
+                        </label> <br>
+                        <label class="radio">
+                            <input type="radio" name="Data" value="Ambos" /> Ambos (22 e 23/03)
+                        </label>
+                    </div>
                 </div>
-            </div>
-
-            <div class="field">
-                <label class="label">Data</label>
-                <div class="control">
-                    <label class="radio">
-                        <input type="radio" name="Data" value="Sábado" /> Sábado (22/03)
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="Data" value="Domingo" /> Domingo (23/03)
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="Data" value="Ambos" /> Ambos (22 e 23/03)
-                    </label>
+                <div class="field is-grouped" style=" display: flex; justify-content: center; gap: 5px;">
+                    <div class="control">
+                        <button class="button is-primary" type="submit" id="submit-button" style="margin-bottom: -9px;">
+                            Enviar
+                        </button>
+                    </div>
+                    <div class="control" style="margin-bottom: -9px;"></button>
+                        <button class="button is-danger">Cancelar</button>
+                    </div>
                 </div>
-            </div>
-
-            <div class="field is-grouped">
-                <div class="control">
-                    <button class="button is-primary" type="submit" id="submit-button">
-                        Enviar
-                    </button>
-                </div>
-                <div class="control">
-                    <button class="button is-danger">Cancelar</button>
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>
         <div id="message" style="
                 display: none;
-                margin: 20px;
+                margin: 0px 16px;
                 font-weight: bold;
-                color: green;
+                color: rgb(255, 255, 255);
                 padding: 8px;
-                background-color: beige;
+                background-color: var(--cor2);
                 border-radius: 4px;
-                border-color: aquamarine;
-              "></div>
+                border-color: rgb(255, 255, 255);
+                margin-bottom: 15px;
+                border: 2px solid var(--cor4);
+                transition: .4s;
+              ">
+        </div>
     </main>
-    <script>
-        document.getElementById("form").addEventListener("submit", function (e) {
-            e.preventDefault(); // Prevent the default form submission
-            document.getElementById("message").textContent = "Enviando...";
-            document.getElementById("message").style.display = "block";
-            document.getElementById("submit-button").disabled = true;
 
-            // Collect the form data
-            var formData = new FormData(this);
-            var keyValuePairs = [];
-            for (var pair of formData.entries()) {
-                keyValuePairs.push(pair[0] + "=" + pair[1]);
-            }
+    <footer>
+        <svg width="100%" height="50" viewBox="0 0 100 10" preserveAspectRatio="none">
+            <polygon points="0,0 100,10 100,10 0,0" fill="white"></polygon>
+        </svg>
+        
+        
 
-            var formDataString = keyValuePairs.join("&");
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d229.06636572250818!2d-46.747464431534134!3d-23.277202177448864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cee799b99162ef%3A0xf54628152d28ae17!2sIBRFM%20-%20IGREJA%20BATISTA%20REFORMADA%20DE%20FRANCISCO%20MORATO!5e0!3m2!1spt-BR!2sbr!4v1740756486991!5m2!1spt-BR!2sbr"
+            max-width="1120" width="80%" height="300"
+            style="border: 1px solid black;  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.89); border-radius: 15px; z-index: 500;"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapa"></iframe>
+    </footer>
 
-            // Send a POST request to your Google Apps Script
-            fetch(
-                "https://script.google.com/macros/s/AKfycbxBRk_J0iWZa6N_uA83oFnOY2trjtV8sUQJwvjCCS3X7k_BEn2oLrIIvzSoWoFHMZZ3lg/exec",
-                {
-                    redirect: "follow",
-                    method: "POST",
-                    body: formDataString,
-                    headers: {
-                        "Content-Type": "text/plain;charset=utf-8",
-                    },
-                }
-            )
-                .then(function (response) {
-                    // Check if the request was successful
-                    if (response) {
-                        return response; // Assuming your script returns JSON response
-                    } else {
-                        throw new Error("Erro ao enviar o formulário.");
-                    }
-                })
-                .then(function (data) {
-                    // Display a success message
-                    document.getElementById("message").textContent =
-                        "Enviado com sucesso!";
-                    document.getElementById("message").style.display = "block";
-                    document.getElementById("message").style.backgroundColor = "green";
-                    document.getElementById("message").style.color = "beige";
-                    document.getElementById("submit-button").disabled = false;
-                    document.getElementById("form").reset();
-
-                    setTimeout(function () {
-                        document.getElementById("message").textContent = "";
-                        document.getElementById("message").style.display = "none";
-                    }, 2600);
-                })
-                .catch(function (error) {
-                    // Handle errors, you can display an error message here
-                    console.error(error);
-                    document.getElementById("message").textContent =
-                        "Um erro ocorreu ao enviar o formulário. Por favor, tente novamente.";
-                    document.getElementById("message").style.display = "block";
-                });
-        });
-    </script>
-
-    <script>
-        const inputTelefone = document.getElementById('telefone');
-
-        inputTelefone.addEventListener('input', function (e) {
-            let telefone = e.target.value;
-
-            // Remove tudo que não for número
-            telefone = telefone.replace(/\D/g, '');
-
-            // Limita o número de dígitos em 11 (2 para o DDD e até 9 para o número)
-            telefone = telefone.substring(0, 11);
-
-            // Formatação progressiva:
-            // Adiciona o parênteses no DDD após os dois primeiros dígitos
-            if (telefone.length >= 2) {
-                telefone = telefone.replace(/^(\d{2})(\d)/, '($1) $2');
-            }
-
-            // Formato para números com 8 dígitos (fixos)
-            if (telefone.length >= 10) {
-                telefone = telefone.replace(/(\d{4})(\d{4})$/, '$1-$2');
-            }
-
-            // Formato para números com 9 dígitos (celulares)
-            if (telefone.length === 11) {
-                telefone = telefone.replace(/(\d{5})(\d{4})$/, '$1-$2');
-            }
-
-            // Atualiza o valor do campo de input
-            e.target.value = telefone;
-        });
-    </script>
-    <script src="js/script.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/mascara.js"></script>
+    <script src="js/formulário.js"></script>
 </body>
 
 </html>

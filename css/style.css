@@ -11,9 +11,6 @@
     --cor4: #3D4C2D;
     --cor5: #324B27;
 }
-#burguermobile {
-    display: none;
-}
 
 .title-mobile {
     display: none;
@@ -155,4 +152,79 @@ h2 {
     text-align: center;
     margin-top: 10px;
     font-weight: bold;
+}
+
+.formulário {
+    border-radius: 15px;
+    padding: 15px;
+    padding-top: 0px;
+    margin-top: 0px;
+    width: 80vw;
+    background-color: var(--cor1);
+}
+
+.control {
+    width: 100%;
+    padding: 5px 0px;
+    margin-bottom: 10px;
+}
+
+.button {
+    width: 100%;
+    padding: 5px 0px;
+    margin-bottom: 10px;
+    background-color: var(--cor2);
+    color: white;
+    border-radius: 5px;
+    border: 2px solid var(--cor4);
+    transition: .4s;
+}
+
+.button:hover {
+    background-color: var(--cor3);
+}
+
+.is-primary {
+    margin-right: 80px;
+}
+
+.input {
+    width: calc(100% - 15px);
+    padding: 5px 0px;
+    border-radius: 5px;
+    border: 2px solid var(--cor3);
+    padding: 5px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.radio {
+    width: 20px;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+main {
+    margin: auto;
+    max-width: 83vw;
+    background-color: var(--cor1);
+    border-radius: 15px;
+    margin-top: 15px;
+    padding: 1px;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: var(--cor4);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
 }
