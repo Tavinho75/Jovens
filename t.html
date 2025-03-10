@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodapé Igreja Batista</title>
+    <style>
+        :root {
+            --verde-escuro: #3b4925;
+            --verde-claro: #7c9054;
+            --cinza-claro: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .conteudo-principal {
+            padding-bottom: 120px;
+            /* Espaço para garantir que o conteúdo não fique sob o footer */
+        }
+
+        .topo-mensagem {
+            text-align: center;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .agenda-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            gap: 15px;
+        }
+
+        .agenda-texto {
+            font-size: 20px;
+            color: #3b4925;
+        }
+
+        .agenda-btn {
+            background-color: var(--verde-claro);
+            color: white;
+            padding: 8px 30px;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .secao-rodape {
+            position: relative;
+            width: 100%;
+        }
+
+        /* Nova implementação para o componente triangular no topo do rodapé */
+        .triangulo-verde {
+            position: relative;
+            height: 50px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .triangulo-verde::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            /* A borda vai subir da direita para a esquerda (invertendo a direção) */
+            border-width: 50px calc(100vw + 40px) 0 0;
+            /* Aplica cor verde escura apenas à borda superior direita */
+            border-color: transparent var(--verde-escuro) transparent transparent;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        .rodape {
+            background-color: var(--verde-escuro);
+            color: white;
+            padding: 20px 0 0 0;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+            margin-top: -2px;
+            /* Ajuste para evitar lacunas visuais */
+        }
+
+        .mapa-container {
+            max-width: 800px;
+            height: 400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            position: relative;
+            top: -40px;
+            /* Posiciona o mapa para cima, sobrepondo o triângulo verde */
+            z-index: 3;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-container {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            gap: 20px;
+        }
+
+        .social-link {
+            display: block;
+            width: 36px;
+            height: 36px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .social-icon {
+            width: 25px;
+            height: 25px;
+            background-color: #1877f2;
+            border-radius: 5px;
+        }
+
+        .social-icon.instagram {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+        }
+
+        .social-icon.youtube {
+            background-color: #FF0000;
+        }
+
+        .social-icon.whatsapp {
+            background-color: #25D366;
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 10px 0 20px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        .coracao {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conteudo-principal">
+        <!-- Mensagem de bênção -->
+        <div class="topo-mensagem">
+            Deus abençoe você!
+        </div>
+
+        <!-- Seção da agenda -->
+        <div class="agenda-section">
+            <div class="agenda-texto">Acesse a nossa agenda de atividades</div>
+            <button class="agenda-btn">AGENDA</button>
+        </div>
+    </div>
+
+    <div class="secao-rodape">
+        <!-- Divisor em forma de triângulo verde -->
+        <div class="triangulo-verde"></div>
+
+        <!-- Rodapé principal -->
+        <footer class="rodape">
+            <!-- Container do mapa -->
+            <div class="mapa-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d229.06636572250818!2d-46.747464431534134!3d-23.277202177448864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cee799b99162ef%3A0xf54628152d28ae17!2sIBRFM%20-%20IGREJA%20BATISTA%20REFORMADA%20DE%20FRANCISCO%20MORATO!5e0!3m2!1spt-BR!2sbr!4v1740756486991!5m2!1spt-BR!2sbr"
+                    max-width="1120" width="100%" height="400px"
+                    style="border: 1px solid black;  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.89); border-radius: 15px;"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapa"></iframe>
+            </div>
+
+            <!-- Redes sociais -->
+            <div class="social-container">
+                <a href="#">
+                    <div><img src="media/facebook.png" alt="" class="social-link"></div>
+                </a>
+                <a href=" #">
+                    <div><img src="media/instagram.png" alt="" class="social-link"></div>
+                </a>
+                <a href=" #">
+                    <div><img src="media/youtube.png" alt="" class="social-link"></div>
+                </a>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                Copyright © Igreja Batista Reformada de Francisco Morato | 2025<br>
+                By Luis Otavio<br>
+                Feito com <span class="coracao">♥</span> de Francisco Morato
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -228,3 +228,7 @@ footer {
     padding: 10px;
     font-size: 14px;
 }
+
+.diagonal {
+    width: 100vw;
+}
