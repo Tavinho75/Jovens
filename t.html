@@ -26,7 +26,7 @@
         }
 
         .conteudo-principal {
-            padding-bottom: 120px;
+            padding-bottom: 0px;
             /* Espaço para garantir que o conteúdo não fique sob o footer */
         }
 
@@ -61,106 +61,7 @@
             cursor: pointer;
         }
 
-        .secao-rodape {
-            position: relative;
-            width: 100%;
-        }
 
-        /* Nova implementação para o componente triangular no topo do rodapé */
-        .triangulo-verde {
-            position: relative;
-            height: 50px;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .triangulo-verde::after {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            /* A borda vai subir da direita para a esquerda (invertendo a direção) */
-            border-width: 50px calc(100vw + 40px) 0 0;
-            /* Aplica cor verde escura apenas à borda superior direita */
-            border-color: transparent var(--verde-escuro) transparent transparent;
-            bottom: 0;
-            right: 0;
-            z-index: 1;
-        }
-
-        .rodape {
-            background-color: var(--verde-escuro);
-            color: white;
-            padding: 20px 0 0 0;
-            width: 100%;
-            position: relative;
-            z-index: 2;
-            margin-top: -2px;
-            /* Ajuste para evitar lacunas visuais */
-        }
-
-        .mapa-container {
-            max-width: 800px;
-            height: 400px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            position: relative;
-            top: -40px;
-            /* Posiciona o mapa para cima, sobrepondo o triângulo verde */
-            z-index: 3;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .social-container {
-            display: flex;
-            justify-content: center;
-            margin: 30px 0;
-            gap: 20px;
-        }
-
-        .social-link {
-            display: block;
-            width: 36px;
-            height: 36px;
-            border-radius: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .social-icon {
-            width: 25px;
-            height: 25px;
-            background-color: #1877f2;
-            border-radius: 5px;
-        }
-
-        .social-icon.instagram {
-            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
-        }
-
-        .social-icon.youtube {
-            background-color: #FF0000;
-        }
-
-        .social-icon.whatsapp {
-            background-color: #25D366;
-        }
-
-        .copyright {
-            text-align: center;
-            padding: 10px 0 20px;
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.6;
-        }
-
-        .coracao {
-            color: red;
-        }
     </style>
 </head>
 
@@ -175,6 +76,10 @@
         <div class="agenda-section">
             <div class="agenda-texto">Acesse a nossa agenda de atividades</div>
             <button class="agenda-btn">AGENDA</button>
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos porro harum dignissimos ex optio debitis exercitationem neque voluptate ullam quasi, odit, eveniet adipisci. Magni quas eum architecto quod sit quasi.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, cum vel distinctio natus error quod laboriosam veritatis labore quo aperiam, rerum officiis incidunt laudantium, quisquam tempora nihil accusantium velit laborum!
         </div>
     </div>
 

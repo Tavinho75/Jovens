@@ -20,6 +20,11 @@
     display: none;
 }
 
+#burguer,
+#burguermobile {
+    display: none;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -229,6 +234,92 @@ footer {
     font-size: 14px;
 }
 
-.diagonal {
-    width: 100vw;
+.secao-rodape {
+    position: relative;
+    width: 100%;
+}
+
+/* Nova implementação para o componente triangular no topo do rodapé */
+.triangulo-verde {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.triangulo-verde::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    /* A borda vai subir da direita para a esquerda (invertendo a direção) */
+    border-width: 50px calc(100vw + 40px) 0 0;
+    /* Aplica cor verde escura apenas à borda superior direita */
+    border-color: transparent var(--cor4) transparent transparent;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.rodape {
+    background-color: var(--cor4);
+    color: white;
+    padding: 20px 0 0 0;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    margin-top: -2px;
+    /* Ajuste para evitar lacunas visuais */
+}
+
+.mapa-container {
+    max-width: 1000px;
+    width: 80vw;
+    height: 400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    position: relative;
+    top: -40px;
+    /* Posiciona o mapa para cima, sobrepondo o triângulo verde */
+    z-index: 3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    gap: 20px;
+}
+
+.social-link {
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.social-icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.copyright {
+    text-align: center;
+    padding: 10px 0 20px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+.coracao {
+    color: red;
 }

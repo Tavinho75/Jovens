@@ -72,6 +72,10 @@
         color: white;
         background-color: var(--cor5);
     }
+
+    .title, .title-mobile, #burguer, #itensmobile, .menu {
+        display: none;
+    }
 }
 
 
@@ -89,9 +93,7 @@
         color: var(--cor4);
     }
 
-    /* #burguermobile, #itensmobile {
-        display: none;
-    } */
+    
 }
 
 @media screen and (max-width: 1130px) {
